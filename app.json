@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "StreamAsap",
+    "slug": "StreamAsap",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "streamasapdev",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#121212",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "backgroundColor": "#121212",
+      "adaptiveIcon": {
+        "backgroundColor": "#121212",
+        "foregroundImage": "./assets/images/asapfull.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.flemzin.StreamAsap"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/asapfull.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#121212"
+        }
+      ],
+      "./plugins/withAndroidWindowBackground"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
