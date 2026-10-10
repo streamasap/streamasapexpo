@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "StreamAsap",
-    "slug": "StreamAsap",
+    "slug": "streamasap-c8ytrc67jo2h8hngwsde",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,7 +9,13 @@
     "userInterfaceStyle": "dark",
     "backgroundColor": "#121212",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flemzin.StreamAsap",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "icon": "./assets/images/icon.png",
+      "backgroundColor": "#121212"
     },
     "android": {
       "backgroundColor": "#121212",
@@ -39,6 +45,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "apiUrl": "https://streamasapbackend.onrender.com",
+      "environment": "development",
+      "router": {},
+      "eas": {
+        "projectId": "f1adf718-b4a3-44c2-a796-421f64255fd5"
+      }
     }
   }
 }

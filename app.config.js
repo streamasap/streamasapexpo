@@ -19,13 +19,16 @@ export default ({ config }) => {
   const localIp = getLocalIpAddress();
 
   // Define API endpoint dynamically based on environment
-  const apiUrl = isDev
+  const USE_REMOTE_BACKEND = true;
+  const apiUrl = (isDev && !USE_REMOTE_BACKEND)
     ? `http://${localIp}:4000`
-    : 'https://api.streamasap.com'; // Production URL
+    : 'https://streamasapbackend.onrender.com'; // Production URL
 
   return {
     ...config, // Preserves all static set
     // tings from app.json
+    name: config.name || 'StreamAsap',
+    slug: config.slug || 'streamasap',
     plugins: [
       ...(config.plugins || []),
       [
